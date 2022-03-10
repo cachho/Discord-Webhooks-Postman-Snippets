@@ -19,3 +19,6 @@ I tried to make the values that will most likely be the same between all your po
 * profile_pic = profile pic of the sender of the post (the profile pic every user has, that's only seen at the start of a sequence of messages from a user)
 * profile_name = same logic as above
 * footer_pic = the footer (sometimes used as a subtitle) has a small icon that you can adjust here with an image url
+
+## Credits ##
+Inspired by and based on Birdie0 post (https://gist.github.com/Birdie0/78ee79402a4301b1faf412ab5f1cdcf9). You can read what the different fields do there.
