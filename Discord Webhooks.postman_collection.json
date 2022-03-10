@@ -1,0 +1,584 @@
+{
+	"info": {
+		"_postman_id": "1d69c9cb-a263-49af-a67c-ebb0f3017689",
+		"name": "Discord Webhooks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Title",
+			"item": [
+				{
+					"name": "Title Link w/ Subtitle + Logo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"{{profile_name}}\",\r\n  \"avatar_url\": \"{{profile_pic}}\",\r\n  \"embeds\": [\r\n    {\r\n      \"title\": \"Title\",\r\n      \"url\": \"https://example.com/\",\r\n      \"color\": {{color}},\r\n      \"footer\": {\r\n        \"text\": \"Subtitle\",\r\n        \"icon_url\": \"{{footer_pic}}\"\r\n      }\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Title Link w/ Subtitle",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"{{profile_name}}\",\r\n  \"avatar_url\": \"{{profile_pic}}\",\r\n  \"embeds\": [\r\n    {\r\n      \"title\": \"Title\",\r\n      \"url\": \"https://example.com/\",\r\n      \"color\": {{color}},\r\n      \"footer\": {\r\n        \"text\": \"Subtitle\"\r\n      }\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://discord.com/api/webhooks/950802926308302878/-ijBEA7RNetDxqpeSpfmywPe9Li_pkhB7oDE9L9j2PpbdTy8Yyhj7DwhWWVYYo76k7-W",
+							"protocol": "https",
+							"host": [
+								"discord",
+								"com"
+							],
+							"path": [
+								"api",
+								"webhooks",
+								"950802926308302878",
+								"-ijBEA7RNetDxqpeSpfmywPe9Li_pkhB7oDE9L9j2PpbdTy8Yyhj7DwhWWVYYo76k7-W"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Title w/ Subtitle",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"{{profile_name}}\",\r\n  \"avatar_url\": \"{{profile_pic}}\",\r\n  \"embeds\": [\r\n    {\r\n      \"title\": \"Title\",\r\n      \"color\": {{color}},\r\n      \"footer\": {\r\n        \"text\": \"Subtitle\"\r\n      }\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://discord.com/api/webhooks/950802926308302878/-ijBEA7RNetDxqpeSpfmywPe9Li_pkhB7oDE9L9j2PpbdTy8Yyhj7DwhWWVYYo76k7-W",
+							"protocol": "https",
+							"host": [
+								"discord",
+								"com"
+							],
+							"path": [
+								"api",
+								"webhooks",
+								"950802926308302878",
+								"-ijBEA7RNetDxqpeSpfmywPe9Li_pkhB7oDE9L9j2PpbdTy8Yyhj7DwhWWVYYo76k7-W"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Posts w/ image + thumbnail",
+			"item": [
+				{
+					"name": "Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"{{profile_name}}\",\r\n  \"avatar_url\": \"{{profile_pic}}\",\r\n  \"embeds\": [\r\n    {\r\n      \"title\": \"Title\",\r\n      \"url\": \"https://example.com/\",\r\n      \"description\": \"Text message. You can use Markdown here. *Italic* **bold** __underline__ ~~strikeout~~ [hyperlink](https://example.com) `code`\",\r\n      \"color\": {{color}},\r\n      \"fields\": [\r\n        {\r\n          \"name\": \"Text\",\r\n          \"value\": \"More text\",\r\n          \"inline\": true\r\n        },\r\n        {\r\n          \"name\": \"Even more text\",\r\n          \"value\": \"Yup\",\r\n          \"inline\": true\r\n        },\r\n        {\r\n          \"name\": \"Use `\\\"inline\\\": true` parameter, if you want to display fields in the same line.\",\r\n          \"value\": \"okay...\"\r\n        },\r\n        {\r\n          \"name\": \"Thanks!\",\r\n          \"value\": \"You're welcome :wink:\"\r\n        }\r\n      ],\r\n      \"thumbnail\": {\r\n        \"url\": \"https://picsum.photos/300/300\"\r\n      },\r\n      \"image\": {\r\n        \"url\": \"https://picsum.photos/200/300\"\r\n      },\r\n      \"footer\": {\r\n        \"text\": \"Woah! So cool! :smirk:\",\r\n        \"icon_url\": \"{{footer_pic}}\"\r\n      }\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post w/o footer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"{{profile_name}}\",\r\n  \"avatar_url\": \"{{profile_pic}}\",\r\n  \"embeds\": [\r\n    {\r\n      \"title\": \"Title\",\r\n      \"url\": \"https://example.com/\",\r\n      \"description\": \"Text message. You can use Markdown here. *Italic* **bold** __underline__ ~~strikeout~~ [hyperlink](https://example.com) `code`\",\r\n      \"color\": {{color}},\r\n      \"fields\": [\r\n        {\r\n          \"name\": \"Text\",\r\n          \"value\": \"More text\",\r\n          \"inline\": true\r\n        },\r\n        {\r\n          \"name\": \"Even more text\",\r\n          \"value\": \"Yup\",\r\n          \"inline\": true\r\n        },\r\n        {\r\n          \"name\": \"Use `\\\"inline\\\": true` parameter, if you want to display fields in the same line.\",\r\n          \"value\": \"okay...\"\r\n        },\r\n        {\r\n          \"name\": \"Thanks!\",\r\n          \"value\": \"You're welcome :wink:\"\r\n        }\r\n      ],\r\n      \"thumbnail\": {\r\n        \"url\": \"https://picsum.photos/300/300\"\r\n      },\r\n      \"image\": {\r\n        \"url\": \"https://picsum.photos/200/300\"\r\n      }\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post w/o table fields",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"{{profile_name}}\",\r\n  \"avatar_url\": \"{{profile_pic}}\",\r\n  \"embeds\": [\r\n    {\r\n      \"title\": \"Title\",\r\n      \"url\": \"https://example.com/\",\r\n      \"description\": \"Text message. You can use Markdown here. *Italic* **bold** __underline__ ~~strikeout~~ [hyperlink](https://example.com) `code`\",\r\n      \"color\": {{color}},\r\n      \"thumbnail\": {\r\n        \"url\": \"https://picsum.photos/300/300\"\r\n      },\r\n      \"image\": {\r\n        \"url\": \"https://picsum.photos/200/300\"\r\n      },\r\n      \"footer\": {\r\n        \"text\": \"Woah! So cool! :smirk:\",\r\n        \"icon_url\": \"{{footer_pic}}\"\r\n      }\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post w/o table fields + quote",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"{{profile_name}}\",\r\n  \"avatar_url\": \"{{profile_pic}}\",\r\n  \"embeds\": [\r\n    {\r\n      \"title\": \"Title\",\r\n      \"url\": \"https://example.com/\",\r\n      \"description\": \"Text message. You can use Markdown here. *Italic* **bold** __underline__ ~~strikeout~~ [hyperlink](https://example.com) `code`\",\r\n      \"color\": {{color}},\r\n      \"thumbnail\": {\r\n        \"url\": \"https://picsum.photos/300/300\"\r\n      },\r\n      \"image\": {\r\n        \"url\": \"https://picsum.photos/200/300\"\r\n      }\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Posts w/ image",
+			"item": [
+				{
+					"name": "Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"{{profile_name}}\",\r\n  \"avatar_url\": \"{{profile_pic}}\",\r\n  \"embeds\": [\r\n    {\r\n      \"title\": \"Title\",\r\n      \"url\": \"https://example.com/\",\r\n      \"description\": \"Text message. You can use Markdown here. *Italic* **bold** __underline__ ~~strikeout~~ [hyperlink](https://example.com) `code`\",\r\n      \"color\": {{color}},\r\n      \"fields\": [\r\n        {\r\n          \"name\": \"Text\",\r\n          \"value\": \"More text\",\r\n          \"inline\": true\r\n        },\r\n        {\r\n          \"name\": \"Even more text\",\r\n          \"value\": \"Yup\",\r\n          \"inline\": true\r\n        },\r\n        {\r\n          \"name\": \"Use `\\\"inline\\\": true` parameter, if you want to display fields in the same line.\",\r\n          \"value\": \"okay...\"\r\n        },\r\n        {\r\n          \"name\": \"Thanks!\",\r\n          \"value\": \"You're welcome :wink:\"\r\n        }\r\n      ],\r\n      \"image\": {\r\n        \"url\": \"https://picsum.photos/200/300\"\r\n      },\r\n      \"footer\": {\r\n        \"text\": \"Woah! So cool! :smirk:\",\r\n        \"icon_url\": \"{{footer_pic}}\"\r\n      }\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post w/o footer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"{{profile_name}}\",\r\n  \"avatar_url\": \"{{profile_pic}}\",\r\n  \"embeds\": [\r\n    {\r\n      \"title\": \"Title\",\r\n      \"url\": \"https://example.com/\",\r\n      \"description\": \"Text message. You can use Markdown here. *Italic* **bold** __underline__ ~~strikeout~~ [hyperlink](https://example.com) `code`\",\r\n      \"color\": {{color}},\r\n      \"fields\": [\r\n        {\r\n          \"name\": \"Text\",\r\n          \"value\": \"More text\",\r\n          \"inline\": true\r\n        },\r\n        {\r\n          \"name\": \"Even more text\",\r\n          \"value\": \"Yup\",\r\n          \"inline\": true\r\n        },\r\n        {\r\n          \"name\": \"Use `\\\"inline\\\": true` parameter, if you want to display fields in the same line.\",\r\n          \"value\": \"okay...\"\r\n        },\r\n        {\r\n          \"name\": \"Thanks!\",\r\n          \"value\": \"You're welcome :wink:\"\r\n        }\r\n      ],\r\n      \"image\": {\r\n        \"url\": \"https://picsum.photos/200/300\"\r\n      }\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post w/o table fields",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"{{profile_name}}\",\r\n  \"avatar_url\": \"{{profile_pic}}\",\r\n  \"embeds\": [\r\n    {\r\n      \"title\": \"Title\",\r\n      \"url\": \"https://example.com/\",\r\n      \"description\": \"Text message. You can use Markdown here. *Italic* **bold** __underline__ ~~strikeout~~ [hyperlink](https://example.com) `code`\",\r\n      \"color\": {{color}},\r\n      \"image\": {\r\n        \"url\": \"https://picsum.photos/200/300\"\r\n      },\r\n      \"footer\": {\r\n        \"text\": \"Woah! So cool! :smirk:\",\r\n        \"icon_url\": \"{{footer_pic}}\"\r\n      }\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post w/o table fields + quote",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"{{profile_name}}\",\r\n  \"avatar_url\": \"{{profile_pic}}\",\r\n  \"embeds\": [\r\n    {\r\n      \"title\": \"Title\",\r\n      \"url\": \"https://example.com/\",\r\n      \"description\": \"Text message. You can use Markdown here. *Italic* **bold** __underline__ ~~strikeout~~ [hyperlink](https://example.com) `code`\",\r\n      \"color\": {{color}},\r\n      \"image\": {\r\n        \"url\": \"https://picsum.photos/200/300\"\r\n      }\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Posts w/ thumbnail",
+			"item": [
+				{
+					"name": "Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"{{profile_name}}\",\r\n  \"avatar_url\": \"{{profile_pic}}\",\r\n  \"embeds\": [\r\n    {\r\n      \"title\": \"Title\",\r\n      \"url\": \"https://example.com/\",\r\n      \"description\": \"Text message. You can use Markdown here. *Italic* **bold** __underline__ ~~strikeout~~ [hyperlink](https://example.com) `code`\",\r\n      \"color\": {{color}},\r\n      \"fields\": [\r\n        {\r\n          \"name\": \"Text\",\r\n          \"value\": \"More text\",\r\n          \"inline\": true\r\n        },\r\n        {\r\n          \"name\": \"Even more text\",\r\n          \"value\": \"Yup\",\r\n          \"inline\": true\r\n        },\r\n        {\r\n          \"name\": \"Use `\\\"inline\\\": true` parameter, if you want to display fields in the same line.\",\r\n          \"value\": \"okay...\"\r\n        },\r\n        {\r\n          \"name\": \"Thanks!\",\r\n          \"value\": \"You're welcome :wink:\"\r\n        }\r\n      ],\r\n      \"thumbnail\": {\r\n        \"url\": \"https://picsum.photos/300/300\"\r\n      },\r\n      \"footer\": {\r\n        \"text\": \"Woah! So cool! :smirk:\",\r\n        \"icon_url\": \"{{footer_pic}}\"\r\n      }\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post w/o footer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"{{profile_name}}\",\r\n  \"avatar_url\": \"{{profile_pic}}\",\r\n  \"embeds\": [\r\n    {\r\n      \"title\": \"Title\",\r\n      \"url\": \"https://example.com/\",\r\n      \"description\": \"Text message. You can use Markdown here. *Italic* **bold** __underline__ ~~strikeout~~ [hyperlink](https://example.com) `code`\",\r\n      \"color\": {{color}},\r\n      \"fields\": [\r\n        {\r\n          \"name\": \"Text\",\r\n          \"value\": \"More text\",\r\n          \"inline\": true\r\n        },\r\n        {\r\n          \"name\": \"Even more text\",\r\n          \"value\": \"Yup\",\r\n          \"inline\": true\r\n        },\r\n        {\r\n          \"name\": \"Use `\\\"inline\\\": true` parameter, if you want to display fields in the same line.\",\r\n          \"value\": \"okay...\"\r\n        },\r\n        {\r\n          \"name\": \"Thanks!\",\r\n          \"value\": \"You're welcome :wink:\"\r\n        }\r\n      ],\r\n      \"thumbnail\": {\r\n        \"url\": \"https://picsum.photos/300/300\"\r\n      }\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post w/o table fields",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"{{profile_name}}\",\r\n  \"avatar_url\": \"{{profile_pic}}\",\r\n  \"embeds\": [\r\n    {\r\n      \"title\": \"Title\",\r\n      \"url\": \"https://example.com/\",\r\n      \"description\": \"Text message. You can use Markdown here. *Italic* **bold** __underline__ ~~strikeout~~ [hyperlink](https://example.com) `code`\",\r\n      \"color\": {{color}},\r\n      \"thumbnail\": {\r\n        \"url\": \"https://picsum.photos/300/300\"\r\n      },\r\n      \"footer\": {\r\n        \"text\": \"Woah! So cool! :smirk:\",\r\n        \"icon_url\": \"{{footer_pic}}\"\r\n      }\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post w/o table fields + quote",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"{{profile_name}}\",\r\n  \"avatar_url\": \"{{profile_pic}}\",\r\n  \"embeds\": [\r\n    {\r\n      \"title\": \"Title\",\r\n      \"url\": \"https://example.com/\",\r\n      \"description\": \"Text message. You can use Markdown here. *Italic* **bold** __underline__ ~~strikeout~~ [hyperlink](https://example.com) `code`\",\r\n      \"color\": {{color}},\r\n      \"thumbnail\": {\r\n        \"url\": \"https://picsum.photos/300/300\"\r\n      }\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Posts Just text",
+			"item": [
+				{
+					"name": "Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"{{profile_name}}\",\r\n  \"avatar_url\": \"{{profile_pic}}\",\r\n  \"embeds\": [\r\n    {\r\n      \"title\": \"Title\",\r\n      \"url\": \"https://example.com/\",\r\n      \"description\": \"Text message. You can use Markdown here. *Italic* **bold** __underline__ ~~strikeout~~ [hyperlink](https://example.com) `code`\",\r\n      \"color\": {{color}},\r\n      \"fields\": [\r\n        {\r\n          \"name\": \"Text\",\r\n          \"value\": \"More text\",\r\n          \"inline\": true\r\n        },\r\n        {\r\n          \"name\": \"Even more text\",\r\n          \"value\": \"Yup\",\r\n          \"inline\": true\r\n        },\r\n        {\r\n          \"name\": \"Use `\\\"inline\\\": true` parameter, if you want to display fields in the same line.\",\r\n          \"value\": \"okay...\"\r\n        },\r\n        {\r\n          \"name\": \"Thanks!\",\r\n          \"value\": \"You're welcome :wink:\"\r\n        }\r\n      ],\r\n      \"footer\": {\r\n        \"text\": \"Woah! So cool! :smirk:\",\r\n        \"icon_url\": \"{{footer_pic}}\"\r\n      }\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post w/o footer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"{{profile_name}}\",\r\n  \"avatar_url\": \"{{profile_pic}}\",\r\n  \"embeds\": [\r\n    {\r\n      \"title\": \"Title\",\r\n      \"url\": \"https://example.com/\",\r\n      \"description\": \"Text message. You can use Markdown here. *Italic* **bold** __underline__ ~~strikeout~~ [hyperlink](https://example.com) `code`\",\r\n      \"color\": {{color}},\r\n      \"fields\": [\r\n        {\r\n          \"name\": \"Text\",\r\n          \"value\": \"More text\",\r\n          \"inline\": true\r\n        },\r\n        {\r\n          \"name\": \"Even more text\",\r\n          \"value\": \"Yup\",\r\n          \"inline\": true\r\n        },\r\n        {\r\n          \"name\": \"Use `\\\"inline\\\": true` parameter, if you want to display fields in the same line.\",\r\n          \"value\": \"okay...\"\r\n        },\r\n        {\r\n          \"name\": \"Thanks!\",\r\n          \"value\": \"You're welcome :wink:\"\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post w/o table fields",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"{{profile_name}}\",\r\n  \"avatar_url\": \"{{profile_pic}}\",\r\n  \"embeds\": [\r\n    {\r\n      \"title\": \"Title\",\r\n      \"url\": \"https://example.com/\",\r\n      \"description\": \"Text message. You can use Markdown here. *Italic* **bold** __underline__ ~~strikeout~~ [hyperlink](https://example.com) `code`\",\r\n      \"color\": {{color}},\r\n      \"footer\": {\r\n        \"text\": \"Woah! So cool! :smirk:\",\r\n        \"icon_url\": \"{{footer_pic}}\"\r\n      }\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post w/o table fields + quote",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"{{profile_name}}\",\r\n  \"avatar_url\": \"{{profile_pic}}\",\r\n  \"embeds\": [\r\n    {\r\n      \"title\": \"Title\",\r\n      \"url\": \"https://example.com/\",\r\n      \"description\": \"Text message. You can use Markdown here. *Italic* **bold** __underline__ ~~strikeout~~ [hyperlink](https://example.com) `code`\",\r\n      \"color\": {{color}}\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Image",
+			"item": [
+				{
+					"name": "Image w/ Title + Subtitle",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"{{profile_name}}\",\r\n  \"avatar_url\": \"{{profile_pic}}\",\r\n  \"embeds\": [\r\n    {\r\n      \"title\": \"Title\",\r\n      \"color\": {{color}},\r\n      \"image\": {\r\n        \"url\": \"https://picsum.photos/200/300\"\r\n      },\r\n      \"footer\": {\r\n        \"text\": \"Woah! So cool! :smirk:\",\r\n        \"icon_url\": \"{{footer_pic}}\"\r\n      }\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Image w/ Subtitle",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"{{profile_name}}\",\r\n  \"avatar_url\": \"{{profile_pic}}\",\r\n  \"embeds\": [\r\n    {\r\n      \"color\": {{color}},\r\n      \"image\": {\r\n        \"url\": \"https://picsum.photos/200/300\"\r\n      },\r\n      \"footer\": {\r\n        \"text\": \"Woah! So cool! :smirk:\",\r\n        \"icon_url\": \"{{footer_pic}}\"\r\n      }\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Image w/ Title",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"{{profile_name}}\",\r\n  \"avatar_url\": \"{{profile_pic}}\",\r\n  \"embeds\": [\r\n    {\r\n      \"title\": \"Title\",\r\n      \"color\": {{color}},\r\n      \"image\": {\r\n        \"url\": \"https://picsum.photos/200/300\"\r\n      }\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "All features",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"{{profile_name}}\",\r\n  \"avatar_url\": \"{{profile_pic}}\",\r\n  \"content\": \"Text message. Up to 2000 characters.\",\r\n  \"embeds\": [\r\n    {\r\n      \"author\": {\r\n        \"name\": \"Birdie♫\",\r\n        \"url\": \"https://www.reddit.com/r/cats/\",\r\n        \"icon_url\": \"https://i.imgur.com/R66g1Pe.jpg\"\r\n      },\r\n      \"title\": \"Title\",\r\n      \"url\": \"https://google.com/\",\r\n      \"description\": \"Text message. You can use Markdown here. *Italic* **bold** __underline__ ~~strikeout~~ [hyperlink](https://google.com) `code`\",\r\n      \"color\": {{color}},\r\n      \"fields\": [\r\n        {\r\n          \"name\": \"Text\",\r\n          \"value\": \"More text\",\r\n          \"inline\": true\r\n        },\r\n        {\r\n          \"name\": \"Even more text\",\r\n          \"value\": \"Yup\",\r\n          \"inline\": true\r\n        },\r\n        {\r\n          \"name\": \"Use `\\\"inline\\\": true` parameter, if you want to display fields in the same line.\",\r\n          \"value\": \"okay...\"\r\n        },\r\n        {\r\n          \"name\": \"Thanks!\",\r\n          \"value\": \"You're welcome :wink:\"\r\n        }\r\n      ],\r\n      \"thumbnail\": {\r\n        \"url\": \"https://picsum.photos/200/200\"\r\n      },\r\n      \"image\": {\r\n        \"url\": \"https://picsum.photos/400/200\"\r\n      },\r\n      \"footer\": {\r\n        \"text\": \"Woah! So cool! :smirk:\",\r\n        \"icon_url\": \"{{footer_pic}}\"\r\n      }\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
