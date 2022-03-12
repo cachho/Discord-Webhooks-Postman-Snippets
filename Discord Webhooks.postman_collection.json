@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "1d69c9cb-a263-49af-a67c-ebb0f3017689",
-		"name": "Discord Webhooks",
+		"_postman_id": "89b935fd-3641-47db-a16d-59111e705353",
+		"name": "Discord Webhooks Copy",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -46,17 +46,9 @@
 							}
 						},
 						"url": {
-							"raw": "https://discord.com/api/webhooks/950802926308302878/-ijBEA7RNetDxqpeSpfmywPe9Li_pkhB7oDE9L9j2PpbdTy8Yyhj7DwhWWVYYo76k7-W",
-							"protocol": "https",
+							"raw": "{{url}}",
 							"host": [
-								"discord",
-								"com"
-							],
-							"path": [
-								"api",
-								"webhooks",
-								"950802926308302878",
-								"-ijBEA7RNetDxqpeSpfmywPe9Li_pkhB7oDE9L9j2PpbdTy8Yyhj7DwhWWVYYo76k7-W"
+								"{{url}}"
 							]
 						}
 					},
@@ -77,17 +69,9 @@
 							}
 						},
 						"url": {
-							"raw": "https://discord.com/api/webhooks/950802926308302878/-ijBEA7RNetDxqpeSpfmywPe9Li_pkhB7oDE9L9j2PpbdTy8Yyhj7DwhWWVYYo76k7-W",
-							"protocol": "https",
+							"raw": "{{url}}",
 							"host": [
-								"discord",
-								"com"
-							],
-							"path": [
-								"api",
-								"webhooks",
-								"950802926308302878",
-								"-ijBEA7RNetDxqpeSpfmywPe9Li_pkhB7oDE9L9j2PpbdTy8Yyhj7DwhWWVYYo76k7-W"
+								"{{url}}"
 							]
 						}
 					},
